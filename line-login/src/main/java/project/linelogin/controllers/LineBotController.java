@@ -13,10 +13,11 @@ public class LineBotController {
     @EventMapping
     public Message handleTextMessage(MessageEvent<TextMessageContent> e) {
         System.out.println("event: " + e);
-        String message = "line://app/1653654512-8W9glPyX";
-//        if(e.getMessage().equals("Login")){
-//        }
-            return new TextMessage(message);
-//        return new TextMessage(message.getText());
+        TextMessageContent message = e.getMessage();
+        TextMessage textMessage = new TextMessage("line://app/1653654512-8W9glPyX");
+        if(e.getMessage().equals("Login")){
+            return textMessage;
+        }
+        return new TextMessage(message.getText());
     }
 }
