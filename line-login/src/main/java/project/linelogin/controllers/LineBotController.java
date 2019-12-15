@@ -14,6 +14,9 @@ public class LineBotController {
     public Message handleTextMessage(MessageEvent<TextMessageContent> e) {
         System.out.println("event: " + e);
         TextMessageContent message = e.getMessage();
+        if(e.getMessage().equals("Login")){
+            return new TextMessage("line://app/1653654512-8W9glPyX");
+        }
         return new TextMessage(message.getText());
     }
 }
