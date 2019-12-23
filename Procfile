@@ -1,1 +1,1 @@
-web: java -jar target/line-login-0.0.1-SNAPSHORT.jar
+web: java $JAVA_OPTS -cp target/classes:target/m2e-wtp/*.jar com.foo.Main
