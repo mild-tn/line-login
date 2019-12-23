@@ -23,7 +23,7 @@ public class UserController {
 
     @GetMapping("/user")
     public Object getUser() {
-        return userService.getUserByUsername("mildTN");
+        return userService.getUserByUsername("mild");
     }
 
     @PostMapping("/registrant")
